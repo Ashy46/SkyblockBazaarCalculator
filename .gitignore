@@ -1,0 +1,8 @@
+#Ignores all .log files
+*.log
+
+#Ignores all .txt files
+*.txt
+
+#ignores vevn folder
+backend/venv/
