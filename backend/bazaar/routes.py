@@ -2,6 +2,11 @@ from flask import Blueprint, jsonify
 from .bazaarData import returnBazaarMatrix
 
 bazaar_bp = Blueprint('bazaar', __name__)
+app = Blueprint('app', __name__)
+
+@app.route('/')
+def home():
+    return "Hello, World!"
 
 @bazaar_bp.route('/matrix', methods=['GET'])
 def get_bazaar_matrix():

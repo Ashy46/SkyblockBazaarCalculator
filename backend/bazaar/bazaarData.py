@@ -37,6 +37,3 @@ def returnBazaarMatrix():
     
     return bazaarMatrix
 
-
-matrix = returnBazaarMatrix()
-print(matrix)
