@@ -1,0 +1,62 @@
+/* styles.css */
+.Bazaar-Matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px; 
+    padding: 24px;
+  }
+  
+  .item-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .item-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .item-image-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 16px;
+  }
+  
+  .item-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .item-details {
+    padding: 16px;
+    text-align: left; /* Align text to the left */
+    background-color: #fff;
+  }
+  
+  .item-details h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .item-details p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .error-message,
+  .loading-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
