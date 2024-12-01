@@ -49,11 +49,12 @@ export default function BazaarMatrix() {
                 const texturePath = getTexturePath(key);
                 return (
                     <div key = {key} className="item-card">
+                        <h3>{key}</h3>
                         <div className="item-image-container">
                             {texturePath && <img src= {texturePath} alt={key} className="item-image"/>}
                         </div>
                         <div className = "item-details">
-                            <strong>{key}: </strong>{value}%
+                            <strong>Margin: </strong>{value}%
                         </div>
                     </div>
                 );

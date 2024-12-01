@@ -7,7 +7,7 @@
   }
   
   .item-card {
-    border: 1px solid #ccc;
+    border: 1px solid grey;
     border-radius: 4px;
     text-align: center;
     overflow: hidden;
@@ -16,42 +16,43 @@
     flex-direction: column;
     transition: box-shadow 0.2s ease;
   }
+
+  .item-card h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: grey;
+    margin-bottom: 2px;
+  }
   
   .item-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
   
   .item-image-container {
-    height: 200px;
-    display: flex;
+    height: 400px;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8f8;
+    background-color: grey;
     padding: 16px;
+    overflow: hidden;
   }
   
-  .item-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+  .item-image-container img {
+    width: 50%;
+    height: 50%;
+    mix-blend-mode: multiply;
+    -webkit-filter: contrast(1.25);
+    filter: contrast(1.25) brightness(110%) saturate(125%);
+    object-fit: cover;
   }
   
   .item-details {
     padding: 16px;
     text-align: left; /* Align text to the left */
-    background-color: #fff;
-  }
-  
-  .item-details h3 {
-    margin: 0 0 8px 0;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .item-details p {
-    margin: 0;
-    color: #666;
-    font-size: 14px;
+    background-color: grey;
+    margin-top: 2px;
   }
   
   .error-message,
