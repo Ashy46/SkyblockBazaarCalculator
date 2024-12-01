@@ -1,4 +1,10 @@
 import React, { useEffect, useState } from "react";
+import "./styles.css";
+
+function getTexturePath(itemId) {
+    const normalizedId = `/assets/Resources/${itemId.toLowerCase()}.png`;
+    return normalizedId;
+}
 
 export default function BazaarMatrix() {
     const [bazaarMatrix, setBazaarMatrix] = useState(null);
@@ -40,9 +46,16 @@ export default function BazaarMatrix() {
     return (
         <div className = "Bazaar-Matrix">
             {Object.entries(bazaarMatrix).map(([key, value]) => {
+                const texturePath = getTexturePath(key);
                 return (
-                    <div key = {key}>
-                        <strong>{key}: </strong>{value}%
+                    <div key = {key} className="item-card">
+                        <h3>{key}</h3>
+                        <div className="item-image-container">
+                            {texturePath && <img src= {texturePath} alt={key} className="item-image"/>}
+                        </div>
+                        <div className = "item-details">
+                            <strong>Margin: </strong>{value}%
+                        </div>
                     </div>
                 );
 

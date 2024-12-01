@@ -2,6 +2,7 @@
 This file gathers the data from the bazaar and stores it. It will refresh every 5 minutes
 since the api only allows calls every 5 minutes. 
 """
+import math
 import requests
 import json
 import time
@@ -32,7 +33,7 @@ def returnBazaarMatrix():
         #Quick buy price = sell price of orders
         sellPrice = data[product]["quick_status"]["buyPrice"]
 
-        percentReturn = ((sellPrice - buyPrice) / buyPrice) * 100
+        percentReturn = math.floor(((sellPrice - buyPrice) / buyPrice) * 100)
         bazaarMatrix[product] = percentReturn
     
     return bazaarMatrix
