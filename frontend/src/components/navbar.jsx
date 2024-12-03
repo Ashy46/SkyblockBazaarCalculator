@@ -15,6 +15,9 @@ export default function Navbar() {
                 <li>
                     <Link to="/bazaar">Bazaar</Link>
                 </li>
+                <li>
+                    <Link to="/portfolio">Portfolio</Link>
+                </li>
             </ul>
         </nav>
     );

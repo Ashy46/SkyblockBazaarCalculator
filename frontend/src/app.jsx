@@ -3,6 +3,7 @@ import { StrictMode } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import BazaarMatrix from './components/bazaarMatrix'
 import Navbar from './components/navbar'
+import Portfolio from './components/portfolio'
 
 const Home = () => <div>Home Page</div>;
 
@@ -13,6 +14,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/bazaar" element={<BazaarMatrix />} />
+                <Route path="/portfolio" element={<Portfolio />} />
             </Routes>
         </BrowserRouter>
     )

@@ -1,4 +1,4 @@
-from bazaarData import getBazaarData
+from .bazaarData import getBazaarData
 import math
 
 def processData():
@@ -32,6 +32,10 @@ def weightFunction(size):
         weights.append(math.pow(1.1,i)/denom)
     return weights
 
+def fixProductName(product):
+    split = product.split("_")
+    return " ".join(split)
+
 def flipingPortflio(investmentSize):
     data = highestReturns()
     portfolio = {}
@@ -51,9 +55,10 @@ def flipingPortflio(investmentSize):
             break
         amount = math.floor(weights[idx] * investmentSize / data[product][0])
         totalReturns += amount * (data[product][1] - data[product][0])
-        portfolio[product] = amount
+        portfolio[fixProductName(product)] = amount
+
     return (portfolio, totalReturns)
 
-print(flipingPortflio(4000000))
+print(flipingPortflio(11000000))
 
     
