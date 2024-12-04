@@ -1,24 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BazaarMatrix from "./bazaarMatrix";
-
-// Add a Home component
-const Home = () => <div>Home Page</div>;
+import "./styles.css";
 
 export default function Navbar() {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/bazaar">Bazaar</Link>
-                </li>
-                <li>
-                    <Link to="/portfolio">Portfolio</Link>
-                </li>
-            </ul>
+        <nav className="Navbar">
+            <div>
+                <ul className = "Links">
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/bazaar">Bazaar Matrix</Link>
+                    </li>
+                    <li>
+                        <Link to="/portfolio">Portfolio</Link>
+                    </li>
+                </ul>
+            </div>
         </nav>
     );
 }

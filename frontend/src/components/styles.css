@@ -1,4 +1,29 @@
 /* styles.css */
+.Navbar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;
+}
+
+.Links {
+    list-style: none;
+    display: flex;
+    gap: 20vh
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding-left: 4vh;
+    padding-right: 4vh;
+}
+
 .Bazaar-Matrix {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 

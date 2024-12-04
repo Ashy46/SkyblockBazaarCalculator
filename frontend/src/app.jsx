@@ -4,8 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import BazaarMatrix from './components/bazaarMatrix'
 import Navbar from './components/navbar'
 import Portfolio from './components/portfolio'
-
-const Home = () => <div>Home Page</div>;
+import Home from './components/home'
 
 export default function App() {
     return (
