@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./styles.css";
+
+function getTexturePath(itemId) {
+    const normalizedId = `/assets/Resources/${itemId.toLowerCase()}.png`;
+    return normalizedId;
+}
 
 export default function Portfolio() {
     const [investmentSize, setInvestmentSize] = useState("");
@@ -13,7 +19,7 @@ export default function Portfolio() {
                 investmentSize,
 
             });
-            console.log(response.data);
+
             setPortfolio(response.data);
         } catch (error) {
             console.error('Error:', error);
@@ -36,17 +42,20 @@ export default function Portfolio() {
                 <button type="submit">Submit</button>
             </form>
             {portfolio && (
-                <ul>
+                <div className="portfolio-display">
                     {Object.entries(portfolio.portfolio).map(([key, value]) => {
+                        const texturePath = getTexturePath(key);
                         return (
-                            <li key={key} className = "product-Position">
-                                <strong>{key}:</strong> {value}
-                            </li>
+                            <div key={key} className = "product-position">
+                                <div>{key}:</div>
+                                <img src={texturePath} alt={key} />
+                                <div>Quantity: {value}</div> 
+                            </div>
                         )
                     })}
-                    <strong>Total Returns:</strong> {portfolio.totalReturns}
-                </ul>
+                </div>
             )}
+            <div className="Returns">Total Returns: {portfolio.totalReturns}</div>
         </div>
     );
 }

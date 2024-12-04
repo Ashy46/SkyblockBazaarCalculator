@@ -61,3 +61,16 @@
     padding: 20px;
     font-size: 18px;
   }
+
+  .portfolio-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4vh;
+    padding: 1vh;
+  }
+
+  .Returns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
