@@ -7,6 +7,10 @@ function getTexturePath(itemId) {
     return normalizedId;
 }
 
+function fixName(name) {
+    
+}
+
 export default function Portfolio() {
     const [investmentSize, setInvestmentSize] = useState("");
     const [portfolio, setPortfolio] = useState(null);
