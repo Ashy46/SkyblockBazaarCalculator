@@ -28,7 +28,7 @@ export default function Portfolio() {
     };
 
     return (
-        <div clasName = "Portfolio">
+        <div className = "Portfolio">
             <h1>Portfolio</h1>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -55,7 +55,7 @@ export default function Portfolio() {
                     })}
                 </div>
             )}
-            <div className="Returns">Total Returns: {portfolio.totalReturns}</div>
+            {portfolio && <div className="Returns">Total Returns: {portfolio.totalReturns}</div>}
         </div>
     );
 }
